@@ -1,0 +1,5 @@
+.vscode/
+build/
+tdd/
+sdkconfig
+CMakeLists.txt.user*

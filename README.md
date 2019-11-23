@@ -113,12 +113,12 @@ should not have any problems.
 With QtCreator, you will need to choose "Project" and in the CMake tab, make
 sure the box marked TDD is checked.
 
-On Windows, if you get a message about failing because "sh.exe" is present,
-open the Details dropdown for the build step.  In "Tool Arguments" add:
-
-    -G"Unix Makefiles"
-
 When you apply settings, the cmake configuration should proceed normally.
-After the first build, QtCreator should detect the "tdd" target.  If in the
-Details dropdown you choose that as the target for your builds, tests will be
-run each time you build the software.
+After the first build, QtCreator should detect the "changeme-test" target.  You
+should select that as the default target.
+
+The Run step should choose "changeme-test" as its default executable.
+
+Following these changes, manually run CMake on the project.  Now when you click
+run, you should get a test run.  Note that you will need to look at the test
+run output yourself.  It is not displayed by default.

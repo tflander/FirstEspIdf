@@ -108,3 +108,17 @@ safely ignore it.  Most modern makes run perfectly fine even if sh.exe is
 present on your system.  If you install cmake and make via chocolatey, you
 should not have any problems.
 
+#### QtCreator
+
+With QtCreator, you will need to choose "Project" and in the CMake tab, make
+sure the box marked TDD is checked.
+
+On Windows, if you get a message about failing because "sh.exe" is present,
+open the Details dropdown for the build step.  In "Tool Arguments" add:
+
+    -G"Unix Makefiles"
+
+When you apply settings, the cmake configuration should proceed normally.
+After the first build, QtCreator should detect the "tdd" target.  If in the
+Details dropdown you choose that as the target for your builds, tests will be
+run each time you build the software.

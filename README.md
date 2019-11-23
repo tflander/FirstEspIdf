@@ -90,3 +90,21 @@ You'll have to parse the test output yourself, but fortunately unity provides
 very nice test messages, and you can always define custom messages for your
 assertions if you find that the default messages aren't sufficient.
 
+#### CLion
+
+With CLion, you will need to do the following:
+
+* In the CMake config for your project, add the options
+
+    -DTDD=true -G"Unix Makefiles"
+
+* Choose "changeme-test" as the run target for running tests.
+
+If you are running on windows, if when you try to run cmake you get a message
+in the console about not being able to run make if sh.exe is present on the
+system, you will need to switch to a system cmake that doesn't throw this
+message.  If the message shows up *only* in the toolchain dialog, you can
+safely ignore it.  Most modern makes run perfectly fine even if sh.exe is
+present on your system.  If you install cmake and make via chocolatey, you
+should not have any problems.
+

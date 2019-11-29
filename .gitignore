@@ -1,5 +1,6 @@
+.idea/
 .vscode/
 build/
 tdd/
-sdkconfig
 CMakeLists.txt.user*
+cmake-build*

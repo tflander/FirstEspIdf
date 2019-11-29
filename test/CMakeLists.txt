@@ -5,18 +5,26 @@
 
 # CMake file for the unit tests 
 
-add_definitions(-D__time_t_defined)
+# Windows (and maybe OSX) need this definition
+if (${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
+	add_definitions(-D__time_t_defined)
+endif()
 
 # Setting up include paths to get esp-idf header files
 include_directories(SYSTEM $ENV{IDF_PATH}/components/freertos/include)
 include_directories(SYSTEM $ENV{IDF_PATH}/components/newlib/include)
 include_directories(SYSTEM $ENV{IDF_PATH}/components/soc/esp32/include)
 include_directories(SYSTEM $ENV{IDF_PATH}/components/esp32/include)
+include_directories(SYSTEM $ENV{IDF_PATH}/components/esp_common/include)
 include_directories(SYSTEM $ENV{IDF_PATH}/components/driver/include)
 include_directories(SYSTEM $ENV{IDF_PATH}/components/soc/esp32/include)
 include_directories(SYSTEM $ENV{IDF_PATH}/components/soc/include)
 include_directories(SYSTEM $ENV{IDF_PATH}/components/heap/include)
 include_directories(${PROJECT_SOURCE_DIR}/build/config)
+include_directories(SYSTEM $ENV{IDF_PATH}/components/xtensa/include)
+include_directories(SYSTEM $ENV{IDF_PATH}/components/xtensa/esp32/include)
+include_directories(SYSTEM $ENV{IDF_PATH}/components/esp_rom/include)
+
 
 # FILE GLOBing: a unix concept where all files matching a wildcard
 # pattern are collected as a group.

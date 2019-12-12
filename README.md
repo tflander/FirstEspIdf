@@ -5,6 +5,11 @@ for esp32 can be challenging.  After doing it the hard way a few times, I sat
 down and worked out what the simplest thing would be.  May the sweat of my brow
 save the sweat of yours.  And also possibly your bacon.
 
+## Prerequisite
+
+* You need the [esp-idf](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/) sdk, which contains everything to build and deploy your application.
+* An [esp32](https://amzn.to/38qDA3k) microcontroller.  They can be acquired cheaply from Amazon, as well as other sources.
+
 ## Use The Repository
 
 1. Download the project (unless you have serious git skills, this will be easier than cloning it).

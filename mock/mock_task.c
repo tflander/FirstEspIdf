@@ -3,7 +3,7 @@
 
 
 
-void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION
+void vTaskDelay( const TickType_t xTicksToDelay )
 {
     // Do Nothing
 }
